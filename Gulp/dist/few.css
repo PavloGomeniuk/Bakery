@@ -1,0 +1,282 @@
+h1 {
+  color: red; }
+  h1 span {
+    color: orange; }
+
+body, li, ul, p, h1, h3, h4, a {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none; }
+
+body {
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-weight: 700; }
+
+.header-menu-section {
+  margin-bottom: 3px; }
+  .header-menu-section .nav-header .ul-header {
+    display: grid;
+    grid-template-columns: 4% 13% 10% 11% 23% 10% 10% 14%;
+    grid-template-rows: 83px; }
+    .header-menu-section .nav-header .ul-header:before {
+      content: " ";
+      height: 7px;
+      background-color: #e24f33;
+      width: 100vw; }
+    .header-menu-section .nav-header .ul-header:after {
+      content: "";
+      height: 3px;
+      background-color: #32221a;
+      width: 100vw; }
+    .header-menu-section .nav-header .ul-header .header-menu-img {
+      position: relative;
+      z-index: 2; }
+    .header-menu-section .nav-header .ul-header a.header-menu-links {
+      margin-top: 10px;
+      color: #372706;
+      line-height: 83px;
+      text-transform: uppercase;
+      text-decoration: none; }
+      .header-menu-section .nav-header .ul-header a.header-menu-links:hover {
+        color: #e24f33; }
+    .header-menu-section .nav-header .ul-header .li-header {
+      text-align: center; }
+    .header-menu-section .nav-header .ul-header .vertical-line {
+      border-right: 1px solid  #978f7e;
+      border-left: 1px solid  #978f7e;
+      margin: 20px 0; }
+      .header-menu-section .nav-header .ul-header .vertical-line .header-menu-links {
+        line-height: 43px; }
+
+.header-general-section {
+  height: 284px;
+  background: url(../image/2-layersfea.png) center/cover no-repeat;
+  display: grid;
+  grid-template-columns: auto;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-family: "Segoe UI - Semibold";
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 26px;
+  text-transform: uppercase;
+  position: relative;
+  margin-bottom: 120px; }
+  .header-general-section:after {
+    content: " ";
+    position: absolute;
+    height: 4px;
+    background-color: #e24f33;
+    top: 102%;
+    width: 100%; }
+
+.main-general-section-services {
+  display: grid;
+  justify-items: center;
+  margin-bottom: 135px;
+  grid-column-gap: 8%; }
+  .main-general-section-services-li_1, .main-general-section-services-li_2, .main-general-section-services-li_3 {
+    grid-column-start: 1;
+    grid-column-end: 1; }
+    .main-general-section-services-li_1 img, .main-general-section-services-li_2 img, .main-general-section-services-li_3 img {
+      margin: 0 10px 10px 20px; }
+  .main-general-section-services-li_4, .main-general-section-services-li_5, .main-general-section-services-li_6 {
+    grid-column-start: 2;
+    grid-column-end: 2; }
+    .main-general-section-services-li_4 img, .main-general-section-services-li_5 img, .main-general-section-services-li_6 img {
+      margin: 0 10px 10px 10px; }
+  .main-general-section-services-li_4 {
+    grid-row-start: 1;
+    grid-row-end: 1; }
+  .main-general-section-services-li_5 {
+    grid-row-start: 2;
+    grid-row-end: 2; }
+  .main-general-section-services-li_6 {
+    grid-row-start: 3;
+    grid-row-end: 3; }
+  .main-general-section-services h1 {
+    color: #724227;
+    font-family: "Roboto Condensed";
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 24px;
+    margin-bottom: 19px; }
+  .main-general-section-services .main-line {
+    margin-bottom: 15px; }
+  .main-general-section-services h3 {
+    font-size: 20px;
+    font-style: italic;
+    line-height: 27px;
+    margin-bottom: 10px; }
+  .main-general-section-services ul {
+    display: grid;
+    grid-template-columns: 50%; }
+    .main-general-section-services ul li {
+      display: flex; }
+
+.main-general-section-recipes {
+  display: grid;
+  grid-template-columns: 50%;
+  justify-items: center;
+  margin-bottom: 120px; }
+  .main-general-section-recipes-img {
+    box-shadow: 0 0 13px rgba(0, 0, 0, 0.63);
+    grid-column-start: 1;
+    grid-column-end: 1;
+    background: url(../image/cake-219595_1280.png) center/cover no-repeat;
+    max-height: 379px;
+    max-width: 571px;
+    height: 379px;
+    width: 571px; }
+  .main-general-section-recipes-text {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    color: #724227;
+    font-family: "Roboto Condensed";
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 24px; }
+    .main-general-section-recipes-text h3 {
+      margin-bottom: 20px; }
+    .main-general-section-recipes-text .main-line {
+      margin-bottom: 20px; }
+    .main-general-section-recipes-text p {
+      font-style: italic;
+      font-size: 20px;
+      margin-bottom: 17px; }
+    .main-general-section-recipes-text p:last-child {
+      font-size: 16px;
+      font-weight: 400;
+      font-style: normal;
+      line-height: 27px; }
+
+.main-general-section-desert {
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
+  height: 350px; }
+  .main-general-section-desert-image1 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    background: url(../image/dessert-455399_1280.png) no-repeat; }
+  .main-general-section-desert-image2 {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    background: url(../image/sweets-268296_1280.png) no-repeat; }
+  .main-general-section-desert-image3 {
+    grid-column-start: 3;
+    grid-column-end: 3;
+    background: url(../image/bun-268237_1280.png) no-repeat; }
+
+@media (min-width: 1300px) {
+  .main-general-section-desert-image1 {
+    background: url(../image/dessert-455399_1280.png) center/cover no-repeat; }
+  .main-general-section-desert-image3 {
+    background: url(../image/bun-268237_1280.png) center/cover no-repeat; }
+  .main-general-section-desert-image2 {
+    background: url(../image/sweets-268296_1280.png) center/cover no-repeat; } }
+
+.footer-section-about {
+  height: 269px;
+  background-color: #1b1b1b;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 5% 45% 45% 5%; }
+  .footer-section-about-dl {
+    color: #f9c237;
+    font-family: "Roboto Condensed";
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 36px;
+    text-transform: uppercase;
+    padding: 0 15px; }
+    .footer-section-about-dl:first-child {
+      grid-column-start: 2;
+      grid-column-end: 2; }
+    .footer-section-about-dl:last-child {
+      grid-column-start: 3;
+      grid-column-end: 3; }
+    .footer-section-about-dl dt {
+      color: #ffffff;
+      font-size: 20px;
+      line-height: 27px; }
+    .footer-section-about-dl dd {
+      margin: 0; }
+    .footer-section-about-dl-dt-form {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 27px;
+      text-transform: uppercase;
+      margin-top: 10px; }
+      .footer-section-about-dl-dt-form input {
+        height: 49px;
+        border-radius: 5px;
+        background-color: #98725f;
+        width: 55%;
+        margin-right: 18px; }
+      .footer-section-about-dl-dt-form button {
+        border: 1px solid #f26522;
+        background-color: #4f3e36;
+        padding: 10px 46px;
+        color: #dcab2f;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 27px;
+        text-transform: uppercase; }
+
+.footer-section-contacts {
+  height: 197px;
+  background-color: #0c0c0c;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  color: #d2a431;
+  font-family: "Roboto Condensed";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+  padding-top: 60px; }
+  .footer-section-contacts dl {
+    max-width: 205px; }
+  .footer-section-contacts-dd {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    color: white;
+    margin: 0; }
+  .footer-section-contacts .text {
+    font-size: 12px; }
+  .footer-section-contacts .img-links img:not(:last-child) {
+    margin-right: 20px; }
+  .footer-section-contacts .email-dd {
+    display: flex; }
+    .footer-section-contacts .email-dd img:first-child {
+      margin-bottom: 15px; }
+    .footer-section-contacts .email-dd img {
+      margin-right: 10px; }
+  .footer-section-contacts a {
+    color: white;
+    font-size: 12px; }
+  .footer-section-contacts h4 {
+    margin-bottom: 30px; }
+  .footer-section-contacts dl {
+    margin: 0; }
+
+.main-line {
+  width: 300px;
+  height: 2px;
+  background-color: #7a7a7a;
+  position: relative; }
+
+.main-line:before {
+  content: " ";
+  display: block;
+  width: 73px;
+  height: 5px;
+  background-color: #e24f33;
+  position: absolute;
+  top: -2px;
+  left: 0; }
