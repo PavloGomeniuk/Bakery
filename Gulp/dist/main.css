@@ -388,9 +388,11 @@ body {
       padding-top: 270px;
       padding-left: 200px; }
       .main-general-section-text-form-label1 {
-        padding-right: 20px; }
+        padding-right: 20px;
+        cursor: pointer; }
       .main-general-section-text-form-label2 img {
-        transform: rotate(180deg); }
+        transform: rotate(180deg);
+        cursor: pointer; }
 
 .main-services-section {
   margin-bottom: 90px; }
@@ -842,3 +844,6 @@ body {
     margin-bottom: 30px; }
   .footer-section-contacts dl {
     margin: 0; }
+
+#Strawberry-discription {
+  display: none; }

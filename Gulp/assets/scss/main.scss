@@ -465,9 +465,11 @@ body {
 	  		padding-left: 200px;
 	  		&-label1 {
 	  			padding-right: 20px;
+	  			cursor: pointer;
 	  		}
 	  		&-label2 img {
 				transform: rotate(180deg);
+				cursor: pointer;
 	  		}
 	  	}
 	}
@@ -1000,4 +1002,8 @@ body {
 	dl{
 		margin: 0;
 	}
+}
+
+#Strawberry-discription {
+	display: none;
 }

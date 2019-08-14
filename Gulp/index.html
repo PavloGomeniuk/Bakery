@@ -11,25 +11,25 @@
 			<nav class="nav-header">
 				<ul class="ul-header">
 					<li class="li-header">
-						<a href="" class="header-menu-links">home</a>
+						<a href="index.html" class="header-menu-links">home</a>
 					</li>
 					<li class="li-header vertical-line">
-						<a href="" class="header-menu-links">about</a>
+						<a href="#about" class="header-menu-links">about</a>
 					</li>
 					<li class="li-header">
-						<a href="" class="header-menu-links">menu</a>
+						<a href="menu.html" class="header-menu-links">menu</a>
 					</li>
 					<li class="li-header">
 						<img src="image/3-layers.png" class="header-menu-img bigEntrance">
 					</li>
 					<li class="li-header">
-						<a href="" class="header-menu-links">FEATURES</a>
+						<a href="few.html" class="header-menu-links">FEATURES</a>
 					</li>
 					<li class="li-header vertical-line">
-						<a href="" class="header-menu-links">blog</a>
+						<a href="index.html" class="header-menu-links">blog</a>
 					</li>
 					<li class="li-header">
-						<a href="" class="header-menu-links">contact</a>
+						<a href="#contact" class="header-menu-links">contact</a>
 					</li>
 				</ul>
 			</nav>
@@ -126,16 +126,65 @@
 			</form>
 			<p class="main-general-section-text">
 				<img src="image/Layer_1.png" alt="girl" class="main-general-section-text-img">
-				<p class="main-general-section-text-p">“Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500’s....
+				<p class="main-general-section-text-p" id="hider_1">“Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500’s....
 				</p>
 				<form class="main-general-section-text-form">
-					<label class="main-general-section-text-form-label1">
+					<label class="main-general-section-text-form-label1" id="next_label">
 						<img src="image/Shape_7_copy.png">
 					</label>
-					<label class="main-general-section-text-form-label2">
+					<label class="main-general-section-text-form-label2" id="prev_label">
 						<img src="image/Shape_7_copy.png">
 					</label>
 				</form>
+				<script type="text/javascript">
+					function animate(options) {
+  					var start = performance.now();
+  						requestAnimationFrame(function animate(time) {
+						    var timeFraction = (time - start) / options.duration;
+						    if (timeFraction > 1) timeFraction = 1;
+    						var progress = options.timing(timeFraction)
+						    options.draw(progress);
+    						if (timeFraction < 1) {
+     							 requestAnimationFrame(animate);
+   							 }
+						  });
+					}
+					document.getElementById('next_label').onclick = function() {
+	 					var p=document.getElementById('hider_1');
+						 if ( p.innerHTML==="A vegetable-packed vegan lasagne made with dairy-free white sauce. It freezes brilliantly and makes the perfect vegan comfort food.") {
+	 	 					p.innerHTML="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500’s....";
+						 }
+	 					else {
+							 p.innerHTML="Each serving provides 470 kcal, 16g protein, 61g carbohydrate (of which 15g sugars), 16g fat (of which 2g saturates), 8g fibre and 0.4g salt.";}
+						animate({
+					        duration: 1000,
+					        timing: function(timeFraction) {
+					          return Math.pow(timeFraction, 2);
+					        },
+					        draw: function(progress) {
+					          hider_1.style.opacity = progress * 1;
+					        }
+					    });
+						}
+
+	 				document.getElementById('prev_label').onclick = function() {
+	 					var p=document.getElementById('hider_1');
+	 					if ( p.innerHTML==="Each serving provides 470 kcal, 16g protein, 61g carbohydrate (of which 15g sugars), 16g fat (of which 2g saturates), 8g fibre and 0.4g salt.") {
+	 	 						p.innerHTML="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500’s....";
+	 					}
+	 					else {
+							p.innerHTML="A vegetable-packed vegan lasagne made with dairy-free white sauce. It freezes brilliantly and makes the perfect vegan comfort food.";}
+						animate({
+				        duration: 1000,
+				        timing: function(timeFraction) {
+				          return Math.pow(timeFraction, 2);
+				        },
+				        draw: function(progress) {
+				          hider_1.style.opacity = progress * 1;
+			        }
+			      });
+						}
+						</script>
 			</p>
 			<h1 class="main-general-section-h1 second-h1">OUR MAIN SERVICES  </h1>
 			<div class="main-line second-line"></div>
@@ -179,15 +228,60 @@
 			<h1 class="main-section-receipt-h1">FEATURED  RECEIPES</h1>
 			<div class="main-line"></div>
 			<ul class="main-section-receipt-ul">
-				<li class="main-section-receipt-ul-li">Sandwich Cake with Honey </li>
-				<li class="main-section-receipt-ul-li">Strawberry Cake</li>
-				<li class="main-section-receipt-ul-li">CheeseCake </li>
-				<li class="main-section-receipt-ul-li">Almond n Raisins Cake</li>
-				<li class="main-section-receipt-ul-li">Fruit n Nut Pie</li>
+				<li class="main-section-receipt-ul-li" >Sandwich Cake with Honey </li>
+				<li class="main-section-receipt-ul-li" id="Strawberry">Strawberry Cake</li>
+				<li class="main-section-receipt-ul-li" id="cheesecake">CheeseCake </li>
+				<li class="main-section-receipt-ul-li" id="almond">Almond n Raisins Cake</li>
+				<li class="main-section-receipt-ul-li" id="fruit">Fruit n Nut Pie</li>
 			</ul>
-			<section class="main-section-receipt-description">
+			<script type="text/javascript">
+				document.getElementById('Strawberry').onmouseover = function() {
+					var a=document.getElementById('sandwich');
+					a.style.display='none';
+					var b=document.getElementById('Strawberry-discription');
+					b.style.display='grid';}
+				document.getElementById('Strawberry').onmouseout = function() {
+					var a=document.getElementById('sandwich');
+					a.style.display='';
+					var b=document.getElementById('Strawberry-discription');
+					b.style.display='none';}
+			</script>
+			<section class="main-section-receipt-description" id="sandwich">
 				<div class="main-section-receipt-description-p">
 				"This cake was sent home from our children's school. It is the simplest, great tasting cake I've ever made. Great to make with the kids, especially for cupcakes."
+					<h3 class="main-section-receipt-description-p-h3">
+						<img src="image/Shape_4.png">
+						Ingredients
+					</h3>
+					<ul class="main-section-receipt-description-p-ul">
+						<li>1 cup white sugar</li>
+						<li>1/2 cup butter</li>
+						<li>2 eggs</li>
+						<li>2 teaspoons vanilla extract</li>
+						<li>1-1/2 cups all-purpose flour</li>
+						<li>1-3/4 teaspoons baking powder</li>
+						<li>1/2 cup milk</li>
+					</ul>
+				</div>
+				<div class="main-section-receipt-description-divimg"></div>
+				<div class="main-section-receipt-description-dl">
+					<dl>
+						<dt>PREP:</dt>
+							<dd>20 mins</dd>
+					</dl>
+					<dl>
+						<dt>COOK</dt>
+							<dd>30mins</dd>
+					</dl>
+					<dl>
+						<dt>READY IN</dt>
+							<dd>50 mins</dd>
+					</dl>	
+				</div>
+			</section>
+			<section class="main-section-receipt-description" id="Strawberry-discription">
+				<div class="main-section-receipt-description-p">
+				"This  sent home from our children's school. It is the simplest, great tasting cake I've ever made. Great to make with the kids, especially for cupcakes."
 					<h3 class="main-section-receipt-description-p-h3">
 						<img src="image/Shape_4.png">
 						Ingredients
@@ -260,7 +354,7 @@
 				</div>
 				<style>#gmap_canvas img{max-width:none!important;background:none!important}
 				</style>
-				<div class="footer-general-section-contacts">
+				<div class="footer-general-section-contacts" id="contact">
 					<section class="footer-general-section-contacts-section">
 						<h4 class="footer-general-section-contacts-section-h4">contact us</h4>
 						<form class="footer-general-section-contacts-section-form">
@@ -273,7 +367,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="footer-section-about">
+		<section class="footer-section-about" id="about">
 			<dl class="footer-section-about-dl">
 				<dd>ABOUT</dd>
 				<dt>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</dt>
