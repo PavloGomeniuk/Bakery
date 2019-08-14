@@ -38,6 +38,21 @@
 			<input type="radio" name="slides" id="point1" checked>
 	        <input type="radio" name="slides" id="point2">
 	        <input type="radio" name="slides" id="point3">
+	        <script type="text/javascript">
+	        	function isChecked() {
+  					const elem = document.querySelectorAll('[name="slides"]');
+  					for (let i = elem.length - 1; i > -1; i--) {
+					    if (elem[i].checked) {
+					      elem[i].checked = false;
+					      elem[(i + 1) % elem.length].checked = true;
+					      break;
+					    }
+  					}
+				}
+				setInterval(() => {
+				  isChecked()
+				}, 8000);
+	        </script>
 	        <div class="slider">
 	            <div class="slides img1">
 	                <p class="header-general-section-text text-top">Baked & Crisp Cookies</p>
